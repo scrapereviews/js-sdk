@@ -1,0 +1,57 @@
+{
+  "name": "scrapereviews",
+  "version": "0.1.0",
+  "description": "Official TypeScript/JavaScript SDK for the ScrapeReviews API: Trustpilot companies, reviews and categories",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "trustpilot",
+    "reviews",
+    "ratings",
+    "scraper",
+    "api",
+    "sdk",
+    "scrapereviews"
+  ],
+  "author": "ScrapeReviews",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scrapereviews/js-sdk"
+  },
+  "homepage": "https://scrapereviews.com",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
